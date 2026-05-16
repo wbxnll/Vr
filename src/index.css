@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f8fafc;
+  background: #050505;
+  font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(520%);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(8);
+  }
+}
+
+@keyframes path-breathe {
+  0%,
+  100% {
+    opacity: 0.48;
+    stroke-dasharray: 5 12;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    opacity: 0.95;
+    stroke-dasharray: 16 8;
+    stroke-dashoffset: -18;
+  }
+}
+
+@keyframes column-breathe {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleY(0.88);
+  }
+
+  50% {
+    transform: translateX(-50%) scaleY(1.08);
+  }
+}
